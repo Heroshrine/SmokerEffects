@@ -1,0 +1,23 @@
+package com.heroshrine.smokereffects.datagen;
+
+
+import com.heroshrine.smokereffects.SmokerEffects;
+import com.heroshrine.smokereffects.registry.Items;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.data.PackOutput;
+
+public class SmokerEffectsModelProvider extends ModelProvider {
+    public SmokerEffectsModelProvider(PackOutput output) {
+        super(output, SmokerEffects.MOD_ID);
+    }
+
+    @Override
+    protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        itemModels.generateFlatItem(Items.SMOKING_POUCH.get(),  ModelTemplates.FLAT_ITEM);
+
+    }
+}
