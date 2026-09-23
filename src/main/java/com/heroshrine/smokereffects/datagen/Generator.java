@@ -14,5 +14,7 @@ public final class Generator {
 
         event.createProvider(SmokerEffectsModelProvider::new);
         event.createProvider(EN_US::new);
+
+        event.createProvider(SmokerEffectsRecipeProvider.Runner::new);
     }
 }
