@@ -16,6 +16,6 @@ public class SmokerEffectsModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        itemModels.generateFlatItem(Items.SMOKING_POUCH.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(Items.SEASONING_POUCH.get(), ModelTemplates.FLAT_ITEM);
     }
 }

@@ -13,7 +13,7 @@ public class EN_US extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addItem(Items.SMOKING_POUCH, "Smoking Pouch");
+        addItem(Items.SEASONING_POUCH, "Seasoning Pouch");
 
         add(Tabs.TAB_NAME, "Smoker Effects");
     }

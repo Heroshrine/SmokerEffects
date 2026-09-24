@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "smokereffects:item/smoking_pouch"
+    "layer0": "smokereffects:item/seasoning_pouch"
   }
 }

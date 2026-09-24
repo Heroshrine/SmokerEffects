@@ -22,7 +22,7 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.FOOD, Items.SMOKING_POUCH)
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.FOOD, Items.SEASONING_POUCH)
                 .pattern(" X ")
                 .pattern("X#X")
                 .pattern(" X ")

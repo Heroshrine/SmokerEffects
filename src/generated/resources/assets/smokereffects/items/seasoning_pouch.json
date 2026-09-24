@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "smokereffects:item/smoking_pouch"
+    "model": "smokereffects:item/seasoning_pouch"
   }
 }

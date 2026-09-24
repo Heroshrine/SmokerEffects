@@ -7,13 +7,13 @@ import net.minecraft.world.level.block.entity.FuelValues;
 import org.jspecify.annotations.NullMarked;
 import org.jspecify.annotations.Nullable;
 
-// Decision was made to remove the 'smoking'/'used' smoking pouch,
+// Decision was made to remove the 'smoking'/'used' smoking pouch (seasoning pouch),
 // to let smoking pouches with same ingredients stack, and
 // to show on the smoker UI what the current effects are.
 
 @NullMarked
-public class SmokingPouch extends Item {
-    public SmokingPouch(Properties properties) {
+public class SeasoningPouch extends Item {
+    public SeasoningPouch(Properties properties) {
         super(properties);
     }
 
