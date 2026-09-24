@@ -13,8 +13,8 @@ public final class Generator {
     public static void gatherData(GatherDataEvent.Client event) {
 
         event.createProvider(SmokerEffectsModelProvider::new);
-        event.createProvider(EN_US::new);
-
         event.createProvider(SmokerEffectsRecipeProvider.Runner::new);
+        event.createProvider(SmokerEffectsDataMapProvider::new);
+        event.createProvider(EN_US::new);
     }
 }

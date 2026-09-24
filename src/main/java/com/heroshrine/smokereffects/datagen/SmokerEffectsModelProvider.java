@@ -7,7 +7,9 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.data.PackOutput;
+import org.jspecify.annotations.NullMarked;
 
+@NullMarked
 public class SmokerEffectsModelProvider extends ModelProvider {
     public SmokerEffectsModelProvider(PackOutput output) {
         super(output, SmokerEffects.MOD_ID);
