@@ -1,15 +1,15 @@
 package com.heroshrine.smokereffects.world.item;
 
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.FuelValues;
 import org.jspecify.annotations.NullMarked;
 import org.jspecify.annotations.Nullable;
 
-import static com.heroshrine.smokereffects.world.item.SmokingSmokingPouch.BURN_TIME;
+// Decision was made to remove the 'smoking'/'used' smoking pouch,
+// to let smoking pouches with same ingredients stack, and
+// to show on the smoker UI what the current effects are.
 
 @NullMarked
 public class SmokingPouch extends Item {
@@ -18,6 +18,7 @@ public class SmokingPouch extends Item {
     }
 
     public static final int MAX_STACK = 4;
+    public static final int BURN_TIME = 2000;
 
     //TODO: only if has component
     @Override
@@ -25,20 +26,9 @@ public class SmokingPouch extends Item {
         return recipeType == RecipeType.SMOKING ? BURN_TIME : 0;
     }
 
-    //TODO: if no component, default. Else, 1.
+    //TODO: verify this can be removed once components added
     @Override
     public int getMaxStackSize(ItemStack stack) {
         return super.getMaxStackSize(stack);
-    }
-
-    //TODO: return separate item that has durability
-    @Override
-    public @Nullable ItemStackTemplate getCraftingRemainder(ItemInstance instance) {
-        if (!(instance instanceof ItemStack stack))
-            return null;
-
-        var used = SmokingSmokingPouch.fromSmokingPouch(stack);
-        used.setDamageValue(used.getDamageValue() + 1);
-        return used.getDamageValue() >= used.getMaxDamage() ? null : ItemStackTemplate.fromNonEmptyStack(used);
     }
 }

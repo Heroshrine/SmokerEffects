@@ -14,7 +14,6 @@ public class EN_US extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addItem(Items.SMOKING_POUCH, "Smoking Pouch");
-        addItem(Items.SMOKING_POUCH_SMOKING, "Smoking Pouch");
 
         add(Tabs.TAB_NAME, "Smoker Effects");
     }

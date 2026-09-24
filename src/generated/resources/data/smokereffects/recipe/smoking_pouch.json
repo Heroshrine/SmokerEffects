@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:coal",
+    "#": "#minecraft:coals",
     "X": "minecraft:wheat"
   },
   "pattern": [

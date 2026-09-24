@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.tags.ItemTags;
 import org.jspecify.annotations.NullMarked;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,9 +27,9 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
                 .pattern("X#X")
                 .pattern(" X ")
                 .define('X', net.minecraft.world.item.Items.WHEAT)
-                .define('#', net.minecraft.world.item.Items.COAL)
+                .define('#', ItemTags.COALS)
                 .unlockedBy("has_wheat", this.has(net.minecraft.world.item.Items.WHEAT))
-                .unlockedBy("has_coal", this.has(net.minecraft.world.item.Items.COAL))
+                .unlockedBy("has_coal", this.has(ItemTags.COALS))
                 .save(this.output);
     }
 
