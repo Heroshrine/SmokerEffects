@@ -1,6 +1,8 @@
 package com.heroshrine.smokereffects;
 
+import com.heroshrine.smokereffects.registry.IngredientTypes;
 import com.heroshrine.smokereffects.registry.Items;
+import com.heroshrine.smokereffects.registry.RecipeSerializers;
 import com.heroshrine.smokereffects.registry.Tabs;
 import org.slf4j.Logger;
 
@@ -18,6 +20,8 @@ public class SmokerEffects {
     public SmokerEffects(IEventBus modEventBus, ModContainer modContainer) {
         Items.ITEMS_HIDDEN.register(modEventBus);
         Items.ITEMS.register(modEventBus);
+        IngredientTypes.INGREDIENT_TYPES.register(modEventBus);
+        RecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         Tabs.CREATIVE_MODE_TABS.register(modEventBus);
     }
 }
