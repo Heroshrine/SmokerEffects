@@ -57,7 +57,7 @@ public class SmokerEffectsDataMapProvider extends DataMapProvider {
         quickAdd(Items.FERMENTED_SPIDER_EYE, new SeasoningEffect(MobEffects.DARKNESS, 8),
                 new SeasoningEffect(MobEffects.SPEED, 5, 1));
         //TODO: random teleport effect, makes you randomly TP while in effect. Use for chorus fruit
-        quickAdd(Items.TORCHFLOWER, new SeasoningEffect(MobEffects.GLOWING, 8),
+        quickAdd(Items.TORCHFLOWER_SEEDS, new SeasoningEffect(MobEffects.GLOWING, 8),
                 new SeasoningEffect(MobEffects.HASTE, 6));
     }
 

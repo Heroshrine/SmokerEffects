@@ -216,7 +216,7 @@
         }
       ]
     },
-    "minecraft:torchflower": {
+    "minecraft:torchflower_seeds": {
       "effects": [
         {
           "duration": 8,
