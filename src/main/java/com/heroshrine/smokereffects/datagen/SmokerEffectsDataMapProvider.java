@@ -25,7 +25,7 @@ public class SmokerEffectsDataMapProvider extends DataMapProvider {
     }
 
     //TODO: create 'weak' versions of effects so they can last for longer. Use those instead.
-    //TODO: conditional entry API
+    //TODO: conditional entry API using item IDs
     @Override
     protected void gather(HolderLookup.Provider provider) {
         quickAdd(Items.BROWN_MUSHROOM, MobEffects.NIGHT_VISION, 5);
