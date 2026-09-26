@@ -3,7 +3,7 @@
     "minecraft:blaze_powder": {
       "effects": [
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:fire_resistance",
           "show_icon": true
         }
@@ -12,7 +12,7 @@
     "minecraft:brown_mushroom": {
       "effects": [
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:night_vision",
           "show_icon": true
         }
@@ -21,7 +21,7 @@
     "minecraft:cocoa_beans": {
       "effects": [
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:haste",
           "show_icon": true
         }
@@ -30,12 +30,12 @@
     "minecraft:crimson_fungus": {
       "effects": [
         {
-          "duration": 6,
+          "duration": 120,
           "id": "minecraft:strength",
           "show_icon": true
         },
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:mining_fatigue",
           "show_icon": true
         }
@@ -44,7 +44,7 @@
     "minecraft:dried_kelp": {
       "effects": [
         {
-          "duration": 16,
+          "duration": 320,
           "id": "minecraft:water_breathing",
           "show_icon": true
         }
@@ -53,13 +53,13 @@
     "minecraft:fermented_spider_eye": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:darkness",
           "show_icon": true
         },
         {
           "amplifier": 1,
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:speed",
           "show_icon": true
         }
@@ -76,12 +76,12 @@
     "minecraft:glow_berries": {
       "effects": [
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:glowing",
           "show_icon": true
         },
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:night_vision",
           "show_icon": true
         }
@@ -90,7 +90,7 @@
     "minecraft:golden_carrot": {
       "effects": [
         {
-          "duration": 16,
+          "duration": 320,
           "id": "minecraft:night_vision",
           "show_icon": true
         }
@@ -99,7 +99,7 @@
     "minecraft:honeycomb": {
       "effects": [
         {
-          "duration": 10,
+          "duration": 200,
           "id": "minecraft:absorption",
           "show_icon": true
         }
@@ -108,7 +108,7 @@
     "minecraft:kelp": {
       "effects": [
         {
-          "duration": 6,
+          "duration": 120,
           "id": "minecraft:water_breathing",
           "show_icon": true
         }
@@ -117,7 +117,7 @@
     "minecraft:magma_cream": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:fire_resistance",
           "show_icon": true
         }
@@ -126,7 +126,7 @@
     "minecraft:nether_wart": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:resistance",
           "show_icon": true
         }
@@ -135,7 +135,7 @@
     "minecraft:pitcher_pod": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:health_boost",
           "show_icon": true
         }
@@ -145,12 +145,12 @@
       "effects": [
         {
           "amplifier": 1,
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:jump_boost",
           "show_icon": true
         },
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:luck",
           "show_icon": true
         }
@@ -159,12 +159,12 @@
     "minecraft:red_mushroom": {
       "effects": [
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:strength",
           "show_icon": true
         },
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:nausea",
           "show_icon": true
         }
@@ -173,7 +173,7 @@
     "minecraft:sea_pickle": {
       "effects": [
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:conduit_power",
           "show_icon": true
         }
@@ -182,17 +182,17 @@
     "minecraft:spore_blossom": {
       "effects": [
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:regeneration",
           "show_icon": true
         },
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:nausea",
           "show_icon": true
         },
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:night_vision",
           "show_icon": true
         }
@@ -201,7 +201,7 @@
     "minecraft:sugar_cane": {
       "effects": [
         {
-          "duration": 5,
+          "duration": 100,
           "id": "minecraft:speed",
           "show_icon": true
         }
@@ -210,7 +210,7 @@
     "minecraft:sweet_berries": {
       "effects": [
         {
-          "duration": 3,
+          "duration": 60,
           "id": "minecraft:regeneration",
           "show_icon": true
         }
@@ -219,12 +219,12 @@
     "minecraft:torchflower_seeds": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:glowing",
           "show_icon": true
         },
         {
-          "duration": 6,
+          "duration": 120,
           "id": "minecraft:haste",
           "show_icon": true
         }
@@ -233,7 +233,7 @@
     "minecraft:warped_fungus": {
       "effects": [
         {
-          "duration": 8,
+          "duration": 160,
           "id": "minecraft:luck",
           "show_icon": true
         }

@@ -24,4 +24,8 @@ public class SmokerEffects {
         RecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         Tabs.CREATIVE_MODE_TABS.register(modEventBus);
     }
+
+    public static int secondsToTicks(int seconds) {
+        return seconds * 20;
+    }
 }
