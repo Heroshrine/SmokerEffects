@@ -3,7 +3,7 @@
   "category": "misc",
   "group": "filled_seasoning_pouch",
   "ingredients": [
-    "smokereffects:seasoning_pouch",
+    "smokereffects:seasoning_pouch_empty",
     {
       "neoforge:ingredient_type": "smokereffects:seasoning"
     },

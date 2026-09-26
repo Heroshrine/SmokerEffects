@@ -29,7 +29,7 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.FOOD, Items.SEASONING_POUCH)
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.FOOD, Items.SEASONING_POUCH_EMPTY)
                 .pattern(" X ")
                 .pattern("X#X")
                 .pattern(" X ")
@@ -41,7 +41,7 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
 
         for (int count = 1; count <= 3; count++) {
             List<Ingredient> ingredients = new ArrayList<>();
-            ingredients.add(Ingredient.of(Items.SEASONING_POUCH));
+            ingredients.add(Ingredient.of(Items.SEASONING_POUCH_EMPTY));
             for (int i = 0; i < count; i++)
                 ingredients.add(SeasoningIngredient.of());
 

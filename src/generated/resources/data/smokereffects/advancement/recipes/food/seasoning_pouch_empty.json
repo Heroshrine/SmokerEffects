@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "smokereffects:seasoning_pouch"
+        "recipe": "smokereffects:seasoning_pouch_empty"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "smokereffects:seasoning_pouch"
+      "smokereffects:seasoning_pouch_empty"
     ]
   }
 }
