@@ -65,7 +65,7 @@ public class FilledSeasoningPouchRecipe extends NormalCraftingRecipe {
         for (ItemStack stack : craftingInput.items()) {
             if (stack.is(com.heroshrine.smokereffects.registry.Items.SEASONING_POUCH.get())
                     && stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
-                    .allItemsCopyStream().count() >= SeasoningPouch.MAX_SEASONINGS)
+                    .allItemsCopyStream().count() + ingredients.size() - 1 > SeasoningPouch.MAX_SEASONINGS)
                 return false;
         }
 

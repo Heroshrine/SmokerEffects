@@ -69,7 +69,7 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
                     RecipeBuilder.createCraftingBookInfo(RecipeCategory.FOOD, "filled_seasoning_pouch"),
                     new ItemStackTemplate(Items.SEASONING_POUCH.asItem()),
                     mixedList
-            ), unlock.build(this.output, keyFilled, RecipeCategory.FOOD));
+            ), unlock.build(this.output, keyMixed, RecipeCategory.FOOD));
         }
     }
 
