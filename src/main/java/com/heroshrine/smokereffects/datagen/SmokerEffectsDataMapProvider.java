@@ -1,8 +1,8 @@
 package com.heroshrine.smokereffects.datagen;
 
 import com.heroshrine.smokereffects.registry.DataMaps;
-import com.heroshrine.smokereffects.registry.DataMaps.SeasoningEffect;
 import com.heroshrine.smokereffects.registry.DataMaps.Seasoning;
+import com.heroshrine.smokereffects.registry.DataMaps.SeasoningEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;

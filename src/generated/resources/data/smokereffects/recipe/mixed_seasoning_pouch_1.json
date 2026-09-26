@@ -6,13 +6,7 @@
     {
       "neoforge:ingredient_type": "smokereffects:seasoning"
     },
-    {
-      "neoforge:ingredient_type": "smokereffects:seasoning"
-    },
-    {
-      "neoforge:ingredient_type": "smokereffects:seasoning"
-    },
-    "smokereffects:seasoning_pouch_empty"
+    "smokereffects:seasoning_pouch"
   ],
   "result": {
     "id": "smokereffects:seasoning_pouch"

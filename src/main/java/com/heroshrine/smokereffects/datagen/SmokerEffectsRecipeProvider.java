@@ -41,22 +41,35 @@ public class SmokerEffectsRecipeProvider extends RecipeProvider {
 
         for (int count = 1; count <= 3; count++) {
             List<Ingredient> ingredients = new ArrayList<>();
-            ingredients.add(Ingredient.of(Items.SEASONING_POUCH_EMPTY));
             for (int i = 0; i < count; i++)
                 ingredients.add(SeasoningIngredient.of());
 
-            ResourceKey<Recipe<?>> key = ResourceKey.create(Registries.RECIPE,
+            ResourceKey<Recipe<?>> keyFilled = ResourceKey.create(Registries.RECIPE,
                     Identifier.fromNamespaceAndPath(SmokerEffects.MOD_ID, "filled_seasoning_pouch_" + count));
+            ResourceKey<Recipe<?>> keyMixed = ResourceKey.create(Registries.RECIPE,
+                    Identifier.fromNamespaceAndPath(SmokerEffects.MOD_ID, "mixed_seasoning_pouch_" + count));
 
             RecipeUnlockAdvancementBuilder unlock = new RecipeUnlockAdvancementBuilder();
-            unlock.unlockedBy("has_seasoning_pouch", this.has(Items.SEASONING_POUCH));
+            unlock.unlockedBy("has_seasoning_pouch", this.has(Items.SEASONING_POUCH_EMPTY));
 
-            this.output.accept(key, new FilledSeasoningPouchRecipe(
+            var filledList = new ArrayList<>(ingredients);
+            filledList.add(Ingredient.of(Items.SEASONING_POUCH_EMPTY.get()));
+            var mixedList = new ArrayList<>(ingredients);
+            mixedList.add(Ingredient.of(Items.SEASONING_POUCH.get()));
+
+            this.output.accept(keyFilled, new FilledSeasoningPouchRecipe(
                     RecipeBuilder.createCraftingCommonInfo(true),
                     RecipeBuilder.createCraftingBookInfo(RecipeCategory.FOOD, "filled_seasoning_pouch"),
                     new ItemStackTemplate(Items.SEASONING_POUCH.asItem()),
-                    ingredients
-            ), unlock.build(this.output, key, RecipeCategory.FOOD));
+                    filledList
+            ), unlock.build(this.output, keyFilled, RecipeCategory.FOOD));
+
+            this.output.accept(keyMixed, new FilledSeasoningPouchRecipe(
+                    RecipeBuilder.createCraftingCommonInfo(true),
+                    RecipeBuilder.createCraftingBookInfo(RecipeCategory.FOOD, "filled_seasoning_pouch"),
+                    new ItemStackTemplate(Items.SEASONING_POUCH.asItem()),
+                    mixedList
+            ), unlock.build(this.output, keyFilled, RecipeCategory.FOOD));
         }
     }
 

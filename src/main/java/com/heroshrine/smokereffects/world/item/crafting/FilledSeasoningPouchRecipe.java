@@ -1,6 +1,7 @@
 package com.heroshrine.smokereffects.world.item.crafting;
 
 import com.heroshrine.smokereffects.registry.DataMaps;
+import com.heroshrine.smokereffects.world.item.SeasoningPouch;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.component.DataComponents;
@@ -23,8 +24,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-//TODO: implement this recipe, take seasonings and add it to seasoning bag output in assemble
-//TODO: find way to render item components in tooltip of seasoning bag
 @NullMarked
 public class FilledSeasoningPouchRecipe extends NormalCraftingRecipe {
     public FilledSeasoningPouchRecipe(CommonInfo commonInfo, CraftingBookInfo bookInfo, ItemStackTemplate result, List<Ingredient> ingredients) {
@@ -65,8 +64,8 @@ public class FilledSeasoningPouchRecipe extends NormalCraftingRecipe {
     public boolean matches(CraftingInput craftingInput, Level level) {
         for (ItemStack stack : craftingInput.items()) {
             if (stack.is(com.heroshrine.smokereffects.registry.Items.SEASONING_POUCH.get())
-                    && !stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
-                    .equals(ItemContainerContents.EMPTY))
+                    && stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
+                    .allItemsCopyStream().count() >= SeasoningPouch.MAX_SEASONINGS)
                 return false;
         }
 
@@ -74,14 +73,21 @@ public class FilledSeasoningPouchRecipe extends NormalCraftingRecipe {
                 craftingInput.stackedContents().canCraft(this, null);
     }
 
-    //TODO: let you add to pouch, up to 3 seasonings
     @Override
     public ItemStack assemble(CraftingInput craftingInput) {
         ItemStack result = this.result.create();
         List<ItemStack> seasonings = new ArrayList<>();
+        ItemStack pouch = null;
         for (var stack : craftingInput.items()) {
             if (stack.isEmpty()) continue;
             if (isSeasoning(stack)) seasonings.add(stack.copyWithCount(1));
+            else if (stack.is(com.heroshrine.smokereffects.registry.Items.SEASONING_POUCH.get()))
+                pouch = stack; // look for a seasoning pouch here to get seasonings from it
+        }
+
+        if (pouch != null) {
+            var contents = pouch.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY);
+            contents.nonEmptyItemCopyStream().forEach(stack -> seasonings.add(stack.copyWithCount(1)));
         }
 
         seasonings.sort(Comparator.comparing(s -> s.typeHolder().getRegisteredName()));

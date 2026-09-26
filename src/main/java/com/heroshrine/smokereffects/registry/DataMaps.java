@@ -21,7 +21,7 @@ import java.util.List;
 @NullMarked
 @EventBusSubscriber(modid = SmokerEffects.MOD_ID)
 public class DataMaps {
-    //TODO: should move effect and seasoning out of here?
+    //TODO: move effect and seasoning out of here?
     public static class SeasoningEffect {
         public SeasoningEffect(Holder<MobEffect> effect, int duration) {
             this.effect = effect;

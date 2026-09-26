@@ -23,9 +23,9 @@ public class SeasoningPouch extends Item {
         super(properties);
     }
 
+    public static final int MAX_SEASONINGS = 3;
     public static final int BURN_TIME = 2000;
 
-    //TODO: test if this works
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType, FuelValues fuelValues) {
         var container = itemStack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY);
