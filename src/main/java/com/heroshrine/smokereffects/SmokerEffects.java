@@ -1,9 +1,6 @@
 package com.heroshrine.smokereffects;
 
-import com.heroshrine.smokereffects.registry.IngredientTypes;
-import com.heroshrine.smokereffects.registry.Items;
-import com.heroshrine.smokereffects.registry.RecipeSerializers;
-import com.heroshrine.smokereffects.registry.Tabs;
+import com.heroshrine.smokereffects.registry.*;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,6 +20,7 @@ public class SmokerEffects {
         IngredientTypes.INGREDIENT_TYPES.register(modEventBus);
         RecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         Tabs.CREATIVE_MODE_TABS.register(modEventBus);
+        Attachments.ATTACHMENT_TYPES.register(modEventBus);
     }
 
     public static int secondsToTicks(int seconds) {
