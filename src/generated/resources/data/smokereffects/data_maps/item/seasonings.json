@@ -68,6 +68,7 @@
     "minecraft:glistering_melon_slice": {
       "effects": [
         {
+          "duration": 1,
           "id": "minecraft:instant_health",
           "show_icon": true
         }

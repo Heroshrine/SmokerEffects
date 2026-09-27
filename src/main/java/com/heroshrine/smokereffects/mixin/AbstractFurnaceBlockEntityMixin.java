@@ -2,7 +2,10 @@ package com.heroshrine.smokereffects.mixin;
 
 import com.heroshrine.smokereffects.network.protocol.ActiveSeasoningPayload;
 import com.heroshrine.smokereffects.registry.Attachments;
+import com.heroshrine.smokereffects.registry.Components;
 import com.heroshrine.smokereffects.world.item.SeasoningPouch;
+import com.heroshrine.smokereffects.world.item.component.SeasonedFood;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
@@ -29,5 +32,22 @@ public class AbstractFurnaceBlockEntityMixin {
                 ? fuel.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
                 : ItemContainerContents.EMPTY);
         ActiveSeasoningPayload.sendToViewers(be);
+    }
+
+    @ModifyExpressionValue(method = "serverTick", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/world/item/crafting/AbstractCookingRecipe;assemble(Lnet/minecraft/world/item/crafting/SingleRecipeInput;)Lnet/minecraft/world/item/ItemStack;"))
+
+    private static ItemStack smokereffects$seasonResult(ItemStack result,
+                                                        @Local(argsOnly = true, name = "entity") AbstractFurnaceBlockEntity entity) {
+        if (!(entity instanceof SmokerBlockEntity be) || !result.has(DataComponents.CONSUMABLE))
+            return result;
+
+        var seasoning = be.getData(Attachments.ACTIVE_SEASONING);
+        if (seasoning.equals(ItemContainerContents.EMPTY))
+            return result;
+
+        var seasoned = result.copy();
+        seasoned.set(Components.SEASONED_FOOD, SeasonedFood.from(seasoning));
+        return seasoned;
     }
 }

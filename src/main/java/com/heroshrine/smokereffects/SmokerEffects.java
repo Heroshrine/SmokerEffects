@@ -19,8 +19,9 @@ public class SmokerEffects {
         Items.ITEMS.register(modEventBus);
         IngredientTypes.INGREDIENT_TYPES.register(modEventBus);
         RecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
-        Tabs.CREATIVE_MODE_TABS.register(modEventBus);
+        Components.DATA_COMPONENTS.register(modEventBus);
         Attachments.ATTACHMENT_TYPES.register(modEventBus);
+        Tabs.CREATIVE_MODE_TABS.register(modEventBus);
     }
 
     public static int secondsToTicks(int seconds) {
