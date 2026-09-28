@@ -44,7 +44,7 @@ public record SeasonedFood(List<MobEffectInstance> effects) implements Consumabl
             var existing = effects.get(holder.value());
             if (existing != null) {
                 effect = new MobEffectInstance(holder, effect.getDuration() + existing.getDuration(),
-                        Math.max(effect.getAmplifier(), existing.getAmplifier()));
+                        Math.max(effect.getAmplifier(), existing.getAmplifier()), true, true, true);
             }
 
             effects.put(holder.value(), effect);

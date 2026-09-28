@@ -21,10 +21,11 @@ public class SmokerEffects {
         RecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         Components.DATA_COMPONENTS.register(modEventBus);
         Attachments.ATTACHMENT_TYPES.register(modEventBus);
+        MobEffects.MOB_EFFECT.register(modEventBus);
         Tabs.CREATIVE_MODE_TABS.register(modEventBus);
     }
 
-    public static int secondsToTicks(int seconds) {
-        return seconds * 20;
+    public static int secondsToTicks(float seconds) {
+        return Math.round(seconds * 20);
     }
 }

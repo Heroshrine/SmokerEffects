@@ -1,6 +1,7 @@
 package com.heroshrine.smokereffects.datagen.languageproviders;
 
 import com.heroshrine.smokereffects.SmokerEffects;
+import com.heroshrine.smokereffects.registry.MobEffects;
 import com.heroshrine.smokereffects.registry.Items;
 import com.heroshrine.smokereffects.registry.Tabs;
 import net.minecraft.data.PackOutput;
