@@ -4,9 +4,9 @@ import com.heroshrine.smokereffects.SmokerEffects;
 import com.heroshrine.smokereffects.world.effect.UnstableMobEffect;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import org.jspecify.annotations.NullMarked;
@@ -19,7 +19,7 @@ public class MobEffectEvents {
     private static final float HEAT_TOLERANCE_REDUCTION = 0.2F;
 
     @SubscribeEvent
-    private static void reduceFireDamage(LivingIncomingDamageEvent event) {
+    private static void heatTolerance(LivingIncomingDamageEvent event) {
         if (!event.getSource().is(DamageTypeTags.IS_FIRE)) return;
 
         var effect = event.getEntity().getEffect(MobEffects.HEAT_TOLERANCE);
@@ -30,7 +30,7 @@ public class MobEffectEvents {
     }
 
     @SubscribeEvent
-    private static void enderstepOnDamage(LivingIncomingDamageEvent event) {
+    private static void enderstep(LivingIncomingDamageEvent event) {
 
         var mob = event.getEntity();
         ServerLevel serverLevel;
@@ -50,11 +50,20 @@ public class MobEffectEvents {
     }
 
     @SubscribeEvent
-    private static void stopEatenPoison(MobEffectEvent.Applicable event) {
+    private static void ironStomach(MobEffectEvent.Applicable event) {
         var mob = event.getEntity();
         var effect = mob.getEffect(MobEffects.IRON_STOMACH);
         if (effect == null) return;
 
         event.setResult(MobEffectEvent.Applicable.Result.DO_NOT_APPLY);
+    }
+
+    @SubscribeEvent
+    private static void affliction(LivingHealEvent event) {
+        var mob = event.getEntity();
+        var effect = mob.getEffect(MobEffects.AFFLICTION);
+        if (effect == null) return;
+
+        event.setAmount(event.getAmount() * 0.3f * (effect.getAmplifier() + 1));
     }
 }

@@ -25,10 +25,10 @@ public class MobEffects {
             = MOB_EFFECT.register("brisk", () ->
             new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x7FD4FF)
                     .withModifier(Attributes.MOVEMENT_SPEED, "brisk", 0.08f, ADD_MULTIPLIED_TOTAL));
-    public static final DeferredHolder<MobEffect, SeasoningMobEffect> HARDENING =
-            MOB_EFFECT.register("hardening", () ->
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> HARDENED =
+            MOB_EFFECT.register("hardened", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xA0785A)
-                            .withModifier(Attributes.ARMOR_TOUGHNESS, "hardening", 2, ADD_VALUE));
+                            .withModifier(Attributes.ARMOR_TOUGHNESS, "hardened", 2, ADD_VALUE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> FERVOR =
             MOB_EFFECT.register("fervor", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xD1BF66)
@@ -69,6 +69,28 @@ public class MobEffects {
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x916E8A)
                             .withModifier(Attributes.STEP_HEIGHT, "long_reach", 1, ADD_VALUE));
 
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> HEAVY =
+            MOB_EFFECT.register("heavy", () ->
+                    new SeasoningMobEffect(MobEffectCategory.NEUTRAL, 0x434147)
+                            .withModifier(Attributes.GRAVITY, "heavy", 0.18f, ADD_MULTIPLIED_TOTAL)
+                            .withModifier(Attributes.KNOCKBACK_RESISTANCE, "heavy", 0.3f, ADD_MULTIPLIED_TOTAL)
+                            .withModifier(Attributes.MOVEMENT_SPEED, "heavy", -0.05f, ADD_MULTIPLIED_BASE));
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> RECKLESS =
+            MOB_EFFECT.register("reckless", () ->
+                    new SeasoningMobEffect(MobEffectCategory.NEUTRAL, 0x6E1C12)
+                            .withModifier(Attributes.ATTACK_DAMAGE, "reckless", 2, ADD_VALUE)
+                            .withModifier(Attributes.ARMOR, "reckless", -4, ADD_VALUE));
+
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> SLUGGISH =
+            MOB_EFFECT.register("sluggish", () ->
+                    new SeasoningMobEffect(MobEffectCategory.HARMFUL, 0x7686AD)
+                            .withModifier(Attributes.MOVEMENT_SPEED, "sluggish", -0.08f, ADD_MULTIPLIED_TOTAL));
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> BRITTLE =
+            MOB_EFFECT.register("brittle", () ->
+                    new SeasoningMobEffect(MobEffectCategory.HARMFUL, 0xA08D5A)
+                            .withModifier(Attributes.ARMOR_TOUGHNESS, "brittle", -2, ADD_VALUE)
+                            .withModifier(Attributes.ARMOR, "brittle", -1.5f, ADD_VALUE));
+
     // effects that aren't just an attribute modifier
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> HEAT_TOLERANCE = // has event in MobEffectEvents
             MOB_EFFECT.register("heat_tolerance", () ->
@@ -87,7 +109,12 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SatedMobEffect> SATED =
             MOB_EFFECT.register("sated", () ->
                     new SatedMobEffect(MobEffectCategory.BENEFICIAL, 0xD6A83D));
+
     public static final DeferredHolder<MobEffect, SatedMobEffect> ENDERSTEP_UNSTABLE =
             MOB_EFFECT.register("enderstep_unstable", () ->
-                    new SatedMobEffect(MobEffectCategory.BENEFICIAL, 0x6C4E80));
+                    new SatedMobEffect(MobEffectCategory.NEUTRAL, 0x6C4E80));
+
+    public static final DeferredHolder<MobEffect, SatedMobEffect> AFFLICTION = // has event in MobEffectEvents
+            MOB_EFFECT.register("affliction", () ->
+                    new SatedMobEffect(MobEffectCategory.HARMFUL, 0x663131));
 }
