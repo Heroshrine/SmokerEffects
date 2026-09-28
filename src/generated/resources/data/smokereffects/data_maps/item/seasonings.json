@@ -1,10 +1,51 @@
 {
   "values": {
+    "#minecraft:eggs": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokereffects:hearty",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:armadillo_scute": {
+      "effects": [
+        {
+          "duration": 3000,
+          "id": "smokereffects:steadfast",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:bamboo": {
+      "effects": [
+        {
+          "duration": 1200,
+          "id": "smokereffects:long_reach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:beetroot": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokereffects:might",
+          "show_icon": true
+        }
+      ]
+    },
     "minecraft:blaze_powder": {
       "effects": [
         {
-          "duration": 60,
-          "id": "minecraft:fire_resistance",
+          "duration": 3600,
+          "id": "smokereffects:heat_tolerance",
+          "show_icon": true
+        },
+        {
+          "duration": 3600,
+          "id": "smokereffects:reckless",
           "show_icon": true
         }
       ]
@@ -12,8 +53,35 @@
     "minecraft:brown_mushroom": {
       "effects": [
         {
-          "duration": 100,
-          "id": "minecraft:night_vision",
+          "duration": 2400,
+          "id": "smokereffects:sated",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:carrot": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokereffects:sure_footed",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:chorus_fruit": {
+      "effects": [
+        {
+          "duration": 1200,
+          "id": "smokereffects:enderstep_unstable",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:clay_ball": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokereffects:steadfast",
           "show_icon": true
         }
       ]
@@ -21,8 +89,8 @@
     "minecraft:cocoa_beans": {
       "effects": [
         {
-          "duration": 100,
-          "id": "minecraft:haste",
+          "duration": 2400,
+          "id": "smokereffects:fervor",
           "show_icon": true
         }
       ]
@@ -30,22 +98,64 @@
     "minecraft:crimson_fungus": {
       "effects": [
         {
-          "duration": 120,
-          "id": "minecraft:strength",
+          "duration": 3900,
+          "id": "smokereffects:might",
           "show_icon": true
         },
         {
-          "duration": 60,
-          "id": "minecraft:mining_fatigue",
+          "duration": 1500,
+          "id": "smokereffects:sluggish",
           "show_icon": true
         }
       ]
     },
-    "minecraft:dried_kelp": {
+    "minecraft:dandelion": {
       "effects": [
         {
-          "duration": 320,
-          "id": "minecraft:water_breathing",
+          "duration": 1,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:dragon_breath": {
+      "effects": [
+        {
+          "duration": 9600,
+          "id": "smokereffects:sated",
+          "show_icon": true
+        },
+        {
+          "duration": 160,
+          "id": "minecraft:instant_damage",
+          "show_icon": true
+        },
+        {
+          "duration": 9600,
+          "id": "smokereffects:vigor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:ender_pearl": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokereffects:enderstep",
+          "show_icon": true
+        },
+        {
+          "duration": 160,
+          "id": "smokereffects:enderstep_unstable",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:feather": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokereffects:featherweight",
           "show_icon": true
         }
       ]
@@ -53,14 +163,67 @@
     "minecraft:fermented_spider_eye": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:darkness",
+          "duration": 600,
+          "id": "smokereffects:affliction",
           "show_icon": true
         },
         {
-          "amplifier": 1,
-          "duration": 100,
+          "amplifier": 2,
+          "duration": 300,
           "id": "minecraft:speed",
+          "show_icon": true
+        },
+        {
+          "duration": 300,
+          "id": "smokereffects:brittle",
+          "show_icon": true
+        },
+        {
+          "duration": 100,
+          "id": "minecraft:darkness",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:flint": {
+      "effects": [
+        {
+          "duration": 7200,
+          "id": "smokereffects:brittle",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokereffects:heavy",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokereffects:sated",
+          "show_icon": true
+        },
+        {
+          "duration": 1,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        },
+        {
+          "duration": 60,
+          "id": "minecraft:instant_damage",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:ghast_tear": {
+      "effects": [
+        {
+          "duration": 7200,
+          "id": "smokereffects:vigor",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokereffects:hearty",
           "show_icon": true
         }
       ]
@@ -68,8 +231,8 @@
     "minecraft:glistering_melon_slice": {
       "effects": [
         {
-          "duration": 1,
-          "id": "minecraft:instant_health",
+          "duration": 4800,
+          "id": "smokereffects:vigor",
           "show_icon": true
         }
       ]
@@ -77,13 +240,13 @@
     "minecraft:glow_berries": {
       "effects": [
         {
-          "duration": 60,
-          "id": "minecraft:glowing",
+          "duration": 2400,
+          "id": "smokereffects:keen_eyes",
           "show_icon": true
         },
         {
-          "duration": 100,
-          "id": "minecraft:night_vision",
+          "duration": 400,
+          "id": "minecraft:glowing",
           "show_icon": true
         }
       ]
@@ -91,8 +254,8 @@
     "minecraft:golden_carrot": {
       "effects": [
         {
-          "duration": 320,
-          "id": "minecraft:night_vision",
+          "duration": 7200,
+          "id": "smokereffects:keen_eyes",
           "show_icon": true
         }
       ]
@@ -100,8 +263,17 @@
     "minecraft:honeycomb": {
       "effects": [
         {
-          "duration": 200,
-          "id": "minecraft:absorption",
+          "duration": 3600,
+          "id": "smokereffects:iron_stomach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:iron_nugget": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokereffects:heavy",
           "show_icon": true
         }
       ]
@@ -109,8 +281,8 @@
     "minecraft:kelp": {
       "effects": [
         {
-          "duration": 120,
-          "id": "minecraft:water_breathing",
+          "duration": 2400,
+          "id": "smokereffects:breath",
           "show_icon": true
         }
       ]
@@ -118,8 +290,9 @@
     "minecraft:magma_cream": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:fire_resistance",
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokereffects:heat_tolerance",
           "show_icon": true
         }
       ]
@@ -127,8 +300,18 @@
     "minecraft:nether_wart": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:resistance",
+          "duration": 3600,
+          "id": "smokereffects:hardened",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:phantom_membrane": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 4800,
+          "id": "smokereffects:featherweight",
           "show_icon": true
         }
       ]
@@ -136,8 +319,76 @@
     "minecraft:pitcher_pod": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:health_boost",
+          "duration": 6000,
+          "id": "smokereffects:long_reach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:poisonous_potato": {
+      "effects": [
+        {
+          "duration": 400,
+          "id": "minecraft:poison",
+          "show_icon": true
+        },
+        {
+          "duration": 2,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        },
+        {
+          "duration": 400,
+          "id": "minecraft:nausea",
+          "show_icon": true
+        },
+        {
+          "duration": 400,
+          "id": "smokereffects:sated",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:popped_chorus_fruit": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokereffects:enderstep",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:prismarine_crystals": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 3900,
+          "id": "smokereffects:aquane",
+          "show_icon": true
+        },
+        {
+          "duration": 3900,
+          "id": "smokereffects:breath",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:pufferfish": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokereffects:breath",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokereffects:affliction",
+          "show_icon": true
+        },
+        {
+          "duration": 60,
+          "id": "minecraft:nausea",
           "show_icon": true
         }
       ]
@@ -146,12 +397,17 @@
       "effects": [
         {
           "amplifier": 1,
-          "duration": 100,
+          "duration": 6000,
+          "id": "smokereffects:sure_footed",
+          "show_icon": true
+        },
+        {
+          "duration": 6000,
           "id": "minecraft:jump_boost",
           "show_icon": true
         },
         {
-          "duration": 100,
+          "duration": 6000,
           "id": "minecraft:luck",
           "show_icon": true
         }
@@ -160,13 +416,62 @@
     "minecraft:red_mushroom": {
       "effects": [
         {
-          "duration": 100,
-          "id": "minecraft:strength",
+          "duration": 3600,
+          "id": "smokereffects:might",
           "show_icon": true
         },
         {
-          "duration": 160,
-          "id": "minecraft:nausea",
+          "duration": 3600,
+          "id": "smokereffects:affliction",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:resin_clump": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokereffects:steadfast",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokereffects:vigor",
+          "show_icon": true
+        },
+        {
+          "amplifier": 1,
+          "duration": 1800,
+          "id": "smokereffects:hearty",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokereffects:sluggish",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:rotten_flesh": {
+      "effects": [
+        {
+          "duration": 600,
+          "id": "smokereffects:affliction",
+          "show_icon": true
+        },
+        {
+          "duration": 200,
+          "id": "minecraft:darkness",
+          "show_icon": true
+        },
+        {
+          "duration": 600,
+          "id": "minecraft:poison",
+          "show_icon": true
+        },
+        {
+          "duration": 2,
+          "id": "minecraft:saturation",
           "show_icon": true
         }
       ]
@@ -174,27 +479,27 @@
     "minecraft:sea_pickle": {
       "effects": [
         {
-          "duration": 60,
-          "id": "minecraft:conduit_power",
+          "duration": 3600,
+          "id": "smokereffects:aquane",
           "show_icon": true
         }
       ]
     },
-    "minecraft:spore_blossom": {
+    "minecraft:spider_eye": {
       "effects": [
         {
-          "duration": 100,
-          "id": "minecraft:regeneration",
+          "duration": 600,
+          "id": "smokereffects:affliction",
           "show_icon": true
         },
         {
-          "duration": 60,
-          "id": "minecraft:nausea",
+          "duration": 2400,
+          "id": "smokereffects:reckless",
           "show_icon": true
         },
         {
-          "duration": 60,
-          "id": "minecraft:night_vision",
+          "duration": 200,
+          "id": "minecraft:poison",
           "show_icon": true
         }
       ]
@@ -202,8 +507,8 @@
     "minecraft:sugar_cane": {
       "effects": [
         {
-          "duration": 100,
-          "id": "minecraft:speed",
+          "duration": 2400,
+          "id": "smokereffects:brisk",
           "show_icon": true
         }
       ]
@@ -211,8 +516,8 @@
     "minecraft:sweet_berries": {
       "effects": [
         {
-          "duration": 60,
-          "id": "minecraft:regeneration",
+          "duration": 2400,
+          "id": "smokereffects:vigor",
           "show_icon": true
         }
       ]
@@ -220,13 +525,24 @@
     "minecraft:torchflower_seeds": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:glowing",
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokereffects:fervor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:turtle_scute": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokereffects:steadfast",
           "show_icon": true
         },
         {
-          "duration": 120,
-          "id": "minecraft:haste",
+          "amplifier": 1,
+          "duration": 2400,
+          "id": "smokereffects:hardened",
           "show_icon": true
         }
       ]
@@ -234,8 +550,8 @@
     "minecraft:warped_fungus": {
       "effects": [
         {
-          "duration": 160,
-          "id": "minecraft:luck",
+          "duration": 4800,
+          "id": "smokereffects:heat_tolerance",
           "show_icon": true
         }
       ]

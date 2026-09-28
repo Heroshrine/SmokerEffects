@@ -5,6 +5,9 @@
   "mixins": [
     "AbstractFurnaceBlockEntityMixin"
   ],
+  "client": [
+    "LightmapRenderStateExtractorMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

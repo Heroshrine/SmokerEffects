@@ -5,8 +5,10 @@ import com.heroshrine.smokereffects.client.gui.tooltip.ClientSeasoningTooltip;
 import com.heroshrine.smokereffects.network.handling.ActiveSeasoningHandler;
 import com.heroshrine.smokereffects.world.inventory.tooltip.SeasoningTooltip;
 import com.heroshrine.smokereffects.world.item.component.SeasonedFood;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.inventory.SmokerScreen;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -14,6 +16,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.event.RegisterTooltipAppendersEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 import java.util.List;
 
@@ -43,5 +46,14 @@ public class ClientEvents {
 
         ClientSeasoningTooltip.extractItems(event.getGuiGraphics(), seasonings,
                 screen.getLeftPos() + 104f, screen.getTopPos() + 57.5f, 0.75f, true);
+    }
+
+    @SubscribeEvent
+    private static void addSeasoningTooltip(ItemTooltipEvent event) {
+        var seasoning = event.getItemStack().typeHolder().getData(DataMaps.SEASONINGS);
+        if (seasoning == null) return;
+
+        var lines = event.getToolTip();
+        lines.add(Component.translatable("tooltip.smokereffects.seasoning").withStyle(ChatFormatting.GRAY));
     }
 }
