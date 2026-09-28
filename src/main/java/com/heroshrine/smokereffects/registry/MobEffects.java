@@ -3,6 +3,7 @@ package com.heroshrine.smokereffects.registry;
 import com.heroshrine.smokereffects.SmokerEffects;
 import com.heroshrine.smokereffects.world.effect.SatedMobEffect;
 import com.heroshrine.smokereffects.world.effect.SeasoningMobEffect;
+import com.heroshrine.smokereffects.world.effect.UnstableMobEffect;
 import com.heroshrine.smokereffects.world.effect.VigorMobEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
@@ -32,7 +33,7 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> FERVOR =
             MOB_EFFECT.register("fervor", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xD1BF66)
-                            .withModifier(Attributes.BLOCK_BREAK_SPEED, "fervor", 2, ADD_MULTIPLIED_TOTAL));
+                            .withModifier(Attributes.BLOCK_BREAK_SPEED, "fervor", 0.08725f, ADD_MULTIPLIED_TOTAL));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> MIGHT =
             MOB_EFFECT.register("might", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xEDB51C)
@@ -44,8 +45,8 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> STEADFAST =
             MOB_EFFECT.register("steadfast", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x574A44)
-                            .withModifier(Attributes.KNOCKBACK_RESISTANCE, "steadfast", 0.15f, ADD_MULTIPLIED_BASE)
-                            .withModifier(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, "steadfast", 0.2f, ADD_MULTIPLIED_BASE));
+                            .withModifier(Attributes.KNOCKBACK_RESISTANCE, "steadfast", 0.15f, ADD_VALUE)
+                            .withModifier(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, "steadfast", 0.2f, ADD_VALUE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> BREATH =
             MOB_EFFECT.register("breath", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x5499B0)
@@ -53,7 +54,7 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> AQUANE =
             MOB_EFFECT.register("aquane", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x275DA1)
-                            .withModifier(Attributes.WATER_MOVEMENT_EFFICIENCY, "aquane", 0.33f, ADD_MULTIPLIED_TOTAL)
+                            .withModifier(Attributes.WATER_MOVEMENT_EFFICIENCY, "aquane", 0.33f, ADD_VALUE)
                             .withModifier(Attributes.SUBMERGED_MINING_SPEED, "aquane", 1f, ADD_MULTIPLIED_TOTAL));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> FEATHERWEIGHT =
             MOB_EFFECT.register("featherweight", () ->
@@ -67,13 +68,14 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> LONG_REACH =
             MOB_EFFECT.register("long_reach", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x916E8A)
-                            .withModifier(Attributes.STEP_HEIGHT, "long_reach", 1, ADD_VALUE));
+                            .withModifier(Attributes.BLOCK_INTERACTION_RANGE, "long_reach", 1, ADD_VALUE)
+                            .withModifier(Attributes.ENTITY_INTERACTION_RANGE, "long_reach", 1f, ADD_VALUE));
 
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> HEAVY =
             MOB_EFFECT.register("heavy", () ->
                     new SeasoningMobEffect(MobEffectCategory.NEUTRAL, 0x434147)
                             .withModifier(Attributes.GRAVITY, "heavy", 0.18f, ADD_MULTIPLIED_TOTAL)
-                            .withModifier(Attributes.KNOCKBACK_RESISTANCE, "heavy", 0.3f, ADD_MULTIPLIED_TOTAL)
+                            .withModifier(Attributes.KNOCKBACK_RESISTANCE, "heavy", 0.3f, ADD_VALUE)
                             .withModifier(Attributes.MOVEMENT_SPEED, "heavy", -0.05f, ADD_MULTIPLIED_BASE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> RECKLESS =
             MOB_EFFECT.register("reckless", () ->
@@ -112,11 +114,11 @@ public class MobEffects {
             MOB_EFFECT.register("sated", () ->
                     new SatedMobEffect(MobEffectCategory.BENEFICIAL, 0xD6A83D));
 
-    public static final DeferredHolder<MobEffect, SatedMobEffect> ENDERSTEP_UNSTABLE =
+    public static final DeferredHolder<MobEffect, UnstableMobEffect> ENDERSTEP_UNSTABLE =
             MOB_EFFECT.register("enderstep_unstable", () ->
-                    new SatedMobEffect(MobEffectCategory.NEUTRAL, 0x6C4E80));
+                    new UnstableMobEffect(MobEffectCategory.NEUTRAL, 0x6C4E80));
 
-    public static final DeferredHolder<MobEffect, SatedMobEffect> AFFLICTION = // has event in MobEffectEvents
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> AFFLICTION = // has event in MobEffectEvents
             MOB_EFFECT.register("affliction", () ->
-                    new SatedMobEffect(MobEffectCategory.HARMFUL, 0x663131));
+                    new SeasoningMobEffect(MobEffectCategory.HARMFUL, 0x663131));
 }

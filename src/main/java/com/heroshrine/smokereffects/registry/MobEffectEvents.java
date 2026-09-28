@@ -11,8 +11,6 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import org.jspecify.annotations.NullMarked;
 
-import java.io.IOException;
-
 @NullMarked
 @EventBusSubscriber(modid = SmokerEffects.MOD_ID)
 public class MobEffectEvents {
@@ -33,18 +31,11 @@ public class MobEffectEvents {
     private static void enderstep(LivingIncomingDamageEvent event) {
 
         var mob = event.getEntity();
-        ServerLevel serverLevel;
         var effect = mob.getEffect(MobEffects.ENDERSTEP);
         if (effect == null) return;
 
-        try (var level = mob.level()) {
-            if (!(level instanceof ServerLevel sl))
-                return;
-            serverLevel = sl;
-        } catch (IOException _) {
-            // ignore????
+        if (!(mob.level() instanceof ServerLevel serverLevel))
             return;
-        }
 
         UnstableMobEffect.randomTeleport(serverLevel, mob, UnstableMobEffect.BASE_RANGE, UnstableMobEffect.TRIES, effect.getAmplifier());
     }
@@ -55,6 +46,9 @@ public class MobEffectEvents {
         var effect = mob.getEffect(MobEffects.IRON_STOMACH);
         if (effect == null) return;
 
+        if (event.getEffectSource() != null || event.getEffectInstance().getEffect().value().isBeneficial())
+            return;
+
         event.setResult(MobEffectEvent.Applicable.Result.DO_NOT_APPLY);
     }
 
@@ -64,6 +58,6 @@ public class MobEffectEvents {
         var effect = mob.getEffect(MobEffects.AFFLICTION);
         if (effect == null) return;
 
-        event.setAmount(event.getAmount() * 0.3f * (effect.getAmplifier() + 1));
+        event.setAmount(event.getAmount() * (float) Math.pow(0.6, effect.getAmplifier() + 1));
     }
 }

@@ -33,6 +33,7 @@ public class UnstableMobEffect extends SeasoningMobEffect {
 
     public static boolean randomTeleport(ServerLevel level, LivingEntity mob, int range, int tries, int amplification) {
         var random = mob.getRandom();
+        var startPos = mob.position();
         double finalRange = range << Math.min(amplification, 2);
         int minY = level.getMinY();
         int maxY = minY + level.getLogicalHeight() - 1;
@@ -46,11 +47,9 @@ public class UnstableMobEffect extends SeasoningMobEffect {
             double z = mob.getZ() + (random.nextDouble() * 2 - 1) * finalRange;
 
             var oldPos = mob.position();
-            if (mob.randomTeleport(x, y, z, true)) {
 
-                var tpEvent = new EntityTeleportEvent(mob, level, x, y, z);
-                if (NeoForge.EVENT_BUS.post(tpEvent).isCanceled())
-                    continue;
+            var tpEvent = new EntityTeleportEvent(mob, level, x, y, z);
+            if (!NeoForge.EVENT_BUS.post(tpEvent).isCanceled() && mob.randomTeleport(x, y, z, true)) {
 
                 if (mob.isPassenger())
                     mob.stopRiding();
