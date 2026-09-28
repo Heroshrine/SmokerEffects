@@ -17,9 +17,9 @@ public class UnstableMobEffect extends SeasoningMobEffect {
         super(category, color);
     }
 
-    public static final int BASE_RANGE = 16; // chorus fruit uses ±8
+    public static final int BASE_RANGE = 16;
     public static final int TRIES = 16;
-    private static final int BASE_INTERVAL = SmokerEffects.secondsToTicks(20f);
+    private static final int BASE_INTERVAL = SmokerEffects.secondsToTicks(10f);
 
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity mob, int amplification) {
@@ -28,12 +28,11 @@ public class UnstableMobEffect extends SeasoningMobEffect {
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int tickCount, int amplification) {
-        return tickCount % BASE_INTERVAL == 0;
+        return tickCount % BASE_INTERVAL == 1;
     }
 
     public static boolean randomTeleport(ServerLevel level, LivingEntity mob, int range, int tries, int amplification) {
         var random = mob.getRandom();
-        var startPos = mob.position();
         double finalRange = range << Math.min(amplification, 2);
         int minY = level.getMinY();
         int maxY = minY + level.getLogicalHeight() - 1;

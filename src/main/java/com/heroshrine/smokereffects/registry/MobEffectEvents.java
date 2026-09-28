@@ -14,7 +14,6 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 @EventBusSubscriber(modid = SmokerEffects.MOD_ID)
 public class MobEffectEvents {
-    private static final float HEAT_TOLERANCE_REDUCTION = 0.2F;
 
     @SubscribeEvent
     private static void heatTolerance(LivingIncomingDamageEvent event) {
@@ -23,8 +22,8 @@ public class MobEffectEvents {
         var effect = event.getEntity().getEffect(MobEffects.HEAT_TOLERANCE);
         if (effect == null) return;
 
-        float reduction = HEAT_TOLERANCE_REDUCTION * (effect.getAmplifier() + 1);
-        event.setAmount(event.getAmount() * (1.0F - reduction));
+        float reduction = 0.2f * (effect.getAmplifier() + 1);
+        event.setAmount(event.getAmount() * (1.0f - reduction));
     }
 
     @SubscribeEvent
@@ -34,7 +33,7 @@ public class MobEffectEvents {
         var effect = mob.getEffect(MobEffects.ENDERSTEP);
         if (effect == null) return;
 
-        if (!(mob.level() instanceof ServerLevel serverLevel))
+        if (!(mob.level() instanceof ServerLevel serverLevel) || event.getSource().is(DamageTypeTags.IS_FALL))
             return;
 
         UnstableMobEffect.randomTeleport(serverLevel, mob, UnstableMobEffect.BASE_RANGE, UnstableMobEffect.TRIES, effect.getAmplifier());
@@ -58,6 +57,6 @@ public class MobEffectEvents {
         var effect = mob.getEffect(MobEffects.AFFLICTION);
         if (effect == null) return;
 
-        event.setAmount(event.getAmount() * (float) Math.pow(0.6, effect.getAmplifier() + 1));
+        event.setAmount(event.getAmount() * (float) Math.pow(0.75, effect.getAmplifier() + 1));
     }
 }

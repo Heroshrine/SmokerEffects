@@ -28,4 +28,8 @@ public class SmokerEffects {
     public static int secondsToTicks(float seconds) {
         return Math.round(seconds * 20);
     }
+
+    public static int minutesToTicks(float minutes) {
+        return Math.round(minutes * 1200);
+    }
 }

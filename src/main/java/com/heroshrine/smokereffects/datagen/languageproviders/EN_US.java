@@ -16,6 +16,7 @@ public class EN_US extends LanguageProvider {
     protected void addTranslations() {
         addItem(Items.SEASONING_POUCH, "Seasoning Pouch");
         addItem(Items.SEASONING_POUCH_EMPTY, "Empty Seasoning Pouch");
+        add("tooltip.smokereffects.seasoning", "Seasoning");
 
         add(Tabs.TAB_NAME, "Smoker Effects");
 
@@ -36,11 +37,11 @@ public class EN_US extends LanguageProvider {
         add(MobEffects.BRITTLE.get(), "Brittle");
         add(MobEffects.HEAT_TOLERANCE.get(), "Heat Tolerance");
         add(MobEffects.ENDERSTEP.get(), "Enderstep");
+        add(MobEffects.ENDERSTEP_UNSTABLE.get(), "Unstable Enderstep");
         add(MobEffects.IRON_STOMACH.get(), "Iron Stomach");
         add(MobEffects.KEEN_EYES.get(), "Keen Eyes");
         add(MobEffects.VIGOR.get(), "Vigor");
         add(MobEffects.SATED.get(), "Sated");
-        add(MobEffects.ENDERSTEP_UNSTABLE.get(), "Unstable Enderstep");
         add(MobEffects.AFFLICTION.get(), "Affliction");
     }
 }

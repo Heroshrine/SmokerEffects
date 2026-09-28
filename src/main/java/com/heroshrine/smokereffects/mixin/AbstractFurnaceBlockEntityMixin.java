@@ -47,7 +47,7 @@ public class AbstractFurnaceBlockEntityMixin {
             return result;
 
         var seasoned = result.copy();
-        seasoned.set(Components.SEASONED_FOOD, SeasonedFood.from(seasoning));
+        seasoned.set(Components.SEASONED_FOOD, SeasonedFood.from(seasoning, result.get(DataComponents.FOOD)));
         return seasoned;
     }
 }

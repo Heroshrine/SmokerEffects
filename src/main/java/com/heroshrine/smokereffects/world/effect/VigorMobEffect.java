@@ -20,7 +20,7 @@ public class VigorMobEffect extends AcceleratedTickSeasoningMobEffect {
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity mob, int amplification) {
         if (mob.getHealth() < mob.getMaxHealth())
-            mob.heal(1.0F);
+            mob.heal(1.0f);
 
         return true;
     }

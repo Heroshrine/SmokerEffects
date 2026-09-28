@@ -29,7 +29,8 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> HARDENED =
             MOB_EFFECT.register("hardened", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xA0785A)
-                            .withModifier(Attributes.ARMOR_TOUGHNESS, "hardened", 2, ADD_VALUE));
+                            .withModifier(Attributes.ARMOR_TOUGHNESS, "hardened", 2, ADD_VALUE)
+                            .withModifier(Attributes.ARMOR, "hardened", 2, ADD_VALUE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> FERVOR =
             MOB_EFFECT.register("fervor", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xD1BF66)
@@ -64,7 +65,7 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> SURE_FOOTED =
             MOB_EFFECT.register("sure_footed", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x7EA35A)
-                            .withModifier(Attributes.STEP_HEIGHT, "sure_footed", 0.4f, ADD_VALUE));
+                            .withModifier(Attributes.STEP_HEIGHT, "sure_footed", 1, ADD_MULTIPLIED_BASE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> LONG_REACH =
             MOB_EFFECT.register("long_reach", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x916E8A)
@@ -91,7 +92,7 @@ public class MobEffects {
             MOB_EFFECT.register("brittle", () ->
                     new SeasoningMobEffect(MobEffectCategory.HARMFUL, 0xA08D5A)
                             .withModifier(Attributes.ARMOR_TOUGHNESS, "brittle", -2, ADD_VALUE)
-                            .withModifier(Attributes.ARMOR, "brittle", -1.5f, ADD_VALUE));
+                            .withModifier(Attributes.ARMOR, "brittle", -2f, ADD_VALUE));
 
     // effects that aren't just an attribute modifier
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> HEAT_TOLERANCE = // has event in MobEffectEvents
