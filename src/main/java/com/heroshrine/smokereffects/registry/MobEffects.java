@@ -102,7 +102,9 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> IRON_STOMACH = // has event in MobEffectEvents
             MOB_EFFECT.register("iron_stomach", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x736570));
-
+    public static final DeferredHolder<MobEffect, SeasoningMobEffect> KEEN_EYES = // has lightmap mixin
+            MOB_EFFECT.register("keen_eyes", () ->
+                    new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xE6BC4A));
     public static final DeferredHolder<MobEffect, VigorMobEffect> VIGOR =
             MOB_EFFECT.register("vigor", () ->
                     new VigorMobEffect(MobEffectCategory.BENEFICIAL, 0x72A85A));
