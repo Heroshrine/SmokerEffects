@@ -13,10 +13,6 @@ import org.jspecify.annotations.Nullable;
 
 import java.util.Optional;
 
-// Decision was made to remove the 'smoking'/'used' smoking pouch (seasoning pouch),
-// to let smoking pouches with same ingredients stack, and
-// to show on the smoker UI what the current effects are.
-
 @NullMarked
 public class SeasoningPouch extends Item {
     public SeasoningPouch(Properties properties) {

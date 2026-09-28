@@ -35,7 +35,7 @@ public class SmokerEffectsDataMapProvider extends DataMapProvider {
                 new SeasoningEffect(MobEffects.NAUSEA, secondsToTicks(8)));
         quickAdd(Items.SUGAR_CANE, MobEffects.SPEED, secondsToTicks(5));
         quickAdd(Items.HONEYCOMB, MobEffects.ABSORPTION, secondsToTicks(10));
-        quickAdd(Items.GLISTERING_MELON_SLICE, MobEffects.INSTANT_HEALTH, 0);
+        quickAdd(Items.GLISTERING_MELON_SLICE, MobEffects.INSTANT_HEALTH, 1);
         quickAdd(Items.GOLDEN_CARROT, MobEffects.NIGHT_VISION, secondsToTicks(16));
         quickAdd(Items.COCOA_BEANS, MobEffects.HASTE, secondsToTicks(5));
         quickAdd(Items.SWEET_BERRIES, MobEffects.REGENERATION, secondsToTicks(3));

@@ -62,7 +62,7 @@ public class DataMaps {
     ).synced(Seasoning.CODEC, false).build();
 
     @SubscribeEvent
-    static void registerDataMaps(RegisterDataMapTypesEvent event) {
+    private static void registerDataMaps(RegisterDataMapTypesEvent event) {
         event.register(SEASONINGS);
     }
 }

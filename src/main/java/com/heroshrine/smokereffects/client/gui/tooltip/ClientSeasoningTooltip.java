@@ -9,6 +9,8 @@ import org.jspecify.annotations.NullMarked;
 
 import java.util.List;
 
+import static com.heroshrine.smokereffects.world.item.SeasoningPouch.MAX_SEASONINGS;
+
 @NullMarked
 public class ClientSeasoningTooltip implements ClientTooltipComponent {
     public ClientSeasoningTooltip(SeasoningTooltip tooltip) {
@@ -32,12 +34,25 @@ public class ClientSeasoningTooltip implements ClientTooltipComponent {
 
     @Override
     public void extractImage(Font font, int x, int y, int w, int h, GuiGraphicsExtractor graphics) {
-        extractItems(graphics, items, x, y);
+        extractItems(graphics, items, x, y, 1, false);
     }
 
-    public static void extractItems(GuiGraphicsExtractor graphics, List<ItemStack> items, int x, int y) {
+    public static void extractItems(GuiGraphicsExtractor graphics, List<ItemStack> items, float x, float y, float scale,
+                                    boolean centered) {
+        var pose = graphics.pose();
+        var step = Math.round(16 * scale) + 2;
+        if (centered) {
+            float max_width = (MAX_SEASONINGS * step);
+            x += (max_width / MAX_SEASONINGS) * (1.5f - 0.5f * items.size());
+        }
+
         for (var i = 0; i < items.size(); i++) {
-            graphics.item(items.get(i), x + i * SPACING, y);
+
+            pose.pushMatrix();
+            pose.translate(x + i * step, y);
+            pose.scale(scale, scale);
+            graphics.item(items.get(i), 0, 0);
+            pose.popMatrix();
         }
     }
 }
