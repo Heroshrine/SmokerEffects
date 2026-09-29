@@ -1,6 +1,6 @@
 license="${mod_license}"
 
-issueTrackerURL="https://github.com/Heroshrine/SmokerEffects/issues"
+issueTrackerURL="https://github.com/Heroshrine/SmokeySeasonings/issues"
 
 [[mods]] #mandatory
 
@@ -10,7 +10,7 @@ version="${mod_version}" #mandatory
 
 displayName="${mod_name}" #mandatory
 
-displayUrl="https://www.curseforge.com/minecraft/mc-mods/smoker-effects"
+displayUrl="https://www.curseforge.com/minecraft/mc-mods/smokey-seasonings"
 
 logoFile="assets/smokeyseasonings/textures/item/seasoning_pouch_empty.png"
 
