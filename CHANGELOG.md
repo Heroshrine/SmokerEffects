@@ -7,6 +7,13 @@
 
 * renamed mod to Smokey Seasonings ([#5](https://github.com/Heroshrine/SmokeySeasonings/issues/5)) ([22a0a90](https://github.com/Heroshrine/SmokeySeasonings/commit/22a0a907019fb210ecff139fc3ca882edf8875f4))
 
+## [1.0.0](https://github.com/Heroshrine/SmokeySeasonings/compare/v1.0.0...v1.0.0) (2026-09-29)
+
+
+### Features
+
+* renamed mod to Smokey Seasonings ([#5](https://github.com/Heroshrine/SmokeySeasonings/issues/5)) ([22a0a90](https://github.com/Heroshrine/SmokeySeasonings/commit/22a0a907019fb210ecff139fc3ca882edf8875f4))
+
 ## [1.0.0](https://github.com/Heroshrine/SmokeySeasonings/releases/tag/v1.0.0) (2026-09-28)
 
 This is the first release of Smokey Seasonings, for Minecraft 26.1.2 on NeoForge. It adds seasoning pouches, which you burn in a smoker to cook food that gives weak but long-lasting effects when eaten.
