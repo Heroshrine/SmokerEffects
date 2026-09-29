@@ -1,0 +1,560 @@
+{
+  "values": {
+    "#minecraft:eggs": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:hearty",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:armadillo_scute": {
+      "effects": [
+        {
+          "duration": 3000,
+          "id": "smokeyseasonings:steadfast",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:bamboo": {
+      "effects": [
+        {
+          "duration": 1200,
+          "id": "smokeyseasonings:long_reach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:beetroot": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:might",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:blaze_powder": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:heat_tolerance",
+          "show_icon": true
+        },
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:reckless",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:brown_mushroom": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:sated",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:carrot": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:sure_footed",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:chorus_fruit": {
+      "effects": [
+        {
+          "duration": 1200,
+          "id": "smokeyseasonings:enderstep_unstable",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:clay_ball": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:steadfast",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:cocoa_beans": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:fervor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:crimson_fungus": {
+      "effects": [
+        {
+          "duration": 3900,
+          "id": "smokeyseasonings:might",
+          "show_icon": true
+        },
+        {
+          "duration": 1500,
+          "id": "smokeyseasonings:sluggish",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:dandelion": {
+      "effects": [
+        {
+          "duration": 1,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:dragon_breath": {
+      "effects": [
+        {
+          "duration": 9600,
+          "id": "smokeyseasonings:sated",
+          "show_icon": true
+        },
+        {
+          "duration": 160,
+          "id": "minecraft:instant_damage",
+          "show_icon": true
+        },
+        {
+          "duration": 9600,
+          "id": "smokeyseasonings:vigor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:ender_pearl": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:enderstep",
+          "show_icon": true
+        },
+        {
+          "duration": 160,
+          "id": "smokeyseasonings:enderstep_unstable",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:feather": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:featherweight",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:fermented_spider_eye": {
+      "effects": [
+        {
+          "duration": 600,
+          "id": "smokeyseasonings:affliction",
+          "show_icon": true
+        },
+        {
+          "amplifier": 2,
+          "duration": 300,
+          "id": "minecraft:speed",
+          "show_icon": true
+        },
+        {
+          "duration": 300,
+          "id": "smokeyseasonings:brittle",
+          "show_icon": true
+        },
+        {
+          "duration": 100,
+          "id": "minecraft:darkness",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:flint": {
+      "effects": [
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:brittle",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:heavy",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:sated",
+          "show_icon": true
+        },
+        {
+          "duration": 1,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        },
+        {
+          "duration": 60,
+          "id": "minecraft:instant_damage",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:ghast_tear": {
+      "effects": [
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:vigor",
+          "show_icon": true
+        },
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:hearty",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:glistering_melon_slice": {
+      "effects": [
+        {
+          "duration": 4800,
+          "id": "smokeyseasonings:vigor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:glow_berries": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:keen_eyes",
+          "show_icon": true
+        },
+        {
+          "duration": 400,
+          "id": "minecraft:glowing",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:golden_carrot": {
+      "effects": [
+        {
+          "duration": 7200,
+          "id": "smokeyseasonings:keen_eyes",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:honeycomb": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:iron_stomach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:iron_nugget": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:heavy",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:kelp": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:breath",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:magma_cream": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokeyseasonings:heat_tolerance",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:nether_wart": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:hardened",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:phantom_membrane": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 4800,
+          "id": "smokeyseasonings:featherweight",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:pitcher_pod": {
+      "effects": [
+        {
+          "duration": 6000,
+          "id": "smokeyseasonings:long_reach",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:poisonous_potato": {
+      "effects": [
+        {
+          "duration": 400,
+          "id": "minecraft:poison",
+          "show_icon": true
+        },
+        {
+          "duration": 2,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        },
+        {
+          "duration": 400,
+          "id": "minecraft:nausea",
+          "show_icon": true
+        },
+        {
+          "duration": 400,
+          "id": "smokeyseasonings:sated",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:popped_chorus_fruit": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:enderstep",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:prismarine_crystals": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 3900,
+          "id": "smokeyseasonings:aquane",
+          "show_icon": true
+        },
+        {
+          "duration": 3900,
+          "id": "smokeyseasonings:breath",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:pufferfish": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokeyseasonings:breath",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:affliction",
+          "show_icon": true
+        },
+        {
+          "duration": 60,
+          "id": "minecraft:nausea",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:rabbit_foot": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokeyseasonings:sure_footed",
+          "show_icon": true
+        },
+        {
+          "duration": 6000,
+          "id": "minecraft:jump_boost",
+          "show_icon": true
+        },
+        {
+          "duration": 6000,
+          "id": "minecraft:luck",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:red_mushroom": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:might",
+          "show_icon": true
+        },
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:affliction",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:resin_clump": {
+      "effects": [
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:steadfast",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:vigor",
+          "show_icon": true
+        },
+        {
+          "amplifier": 1,
+          "duration": 1800,
+          "id": "smokeyseasonings:hearty",
+          "show_icon": true
+        },
+        {
+          "duration": 1800,
+          "id": "smokeyseasonings:sluggish",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:rotten_flesh": {
+      "effects": [
+        {
+          "duration": 600,
+          "id": "smokeyseasonings:affliction",
+          "show_icon": true
+        },
+        {
+          "duration": 200,
+          "id": "minecraft:darkness",
+          "show_icon": true
+        },
+        {
+          "duration": 600,
+          "id": "minecraft:poison",
+          "show_icon": true
+        },
+        {
+          "duration": 2,
+          "id": "minecraft:saturation",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:sea_pickle": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:aquane",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:spider_eye": {
+      "effects": [
+        {
+          "duration": 600,
+          "id": "smokeyseasonings:affliction",
+          "show_icon": true
+        },
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:reckless",
+          "show_icon": true
+        },
+        {
+          "duration": 200,
+          "id": "minecraft:poison",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:sugar_cane": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:brisk",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:sweet_berries": {
+      "effects": [
+        {
+          "duration": 2400,
+          "id": "smokeyseasonings:vigor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:torchflower_seeds": {
+      "effects": [
+        {
+          "amplifier": 1,
+          "duration": 6000,
+          "id": "smokeyseasonings:fervor",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:turtle_scute": {
+      "effects": [
+        {
+          "duration": 3600,
+          "id": "smokeyseasonings:steadfast",
+          "show_icon": true
+        },
+        {
+          "amplifier": 1,
+          "duration": 2400,
+          "id": "smokeyseasonings:hardened",
+          "show_icon": true
+        }
+      ]
+    },
+    "minecraft:warped_fungus": {
+      "effects": [
+        {
+          "duration": 4800,
+          "id": "smokeyseasonings:heat_tolerance",
+          "show_icon": true
+        }
+      ]
+    }
+  }
+}
