@@ -6,7 +6,7 @@
   "draft": true,
   "packages": {
     ".": {
-      "package-name": "smokereffects",
+      "package-name": "smokeyseasonings",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
         { "type": "generic", "path": "gradle.properties" }

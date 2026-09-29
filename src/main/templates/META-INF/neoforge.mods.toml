@@ -1,5 +1,6 @@
-
 license="${mod_license}"
+
+issueTrackerURL="https://github.com/Heroshrine/SmokeySeasonings/issues"
 
 [[mods]] #mandatory
 
@@ -9,10 +10,14 @@ version="${mod_version}" #mandatory
 
 displayName="${mod_name}" #mandatory
 
+displayUrl="https://www.curseforge.com/minecraft/mc-mods/smokey-seasonings"
+
+logoFile="assets/smokeyseasonings/textures/item/seasoning_pouch_empty.png"
+
 authors="Heroshrine"
 
 description='''
-An overhaul mod for smokers.
+Smoke food with seasonings by burning seasoning pouches in the Smoker, giving light but long lasting effects.
 '''
 
 [[mixins]]

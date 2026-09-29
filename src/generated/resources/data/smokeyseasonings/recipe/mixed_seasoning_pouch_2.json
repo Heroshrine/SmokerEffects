@@ -1,0 +1,17 @@
+{
+  "type": "smokeyseasonings:filled_seasoning_pouch",
+  "category": "misc",
+  "group": "filled_seasoning_pouch",
+  "ingredients": [
+    {
+      "neoforge:ingredient_type": "smokeyseasonings:seasoning"
+    },
+    {
+      "neoforge:ingredient_type": "smokeyseasonings:seasoning"
+    },
+    "smokeyseasonings:seasoning_pouch"
+  ],
+  "result": {
+    "id": "smokeyseasonings:seasoning_pouch"
+  }
+}
