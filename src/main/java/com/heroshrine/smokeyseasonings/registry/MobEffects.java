@@ -61,7 +61,7 @@ public class MobEffects {
             MOB_EFFECT.register("featherweight", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0xC5A6E8)
                             .withModifier(Attributes.GRAVITY, "featherweight", -0.11f, ADD_MULTIPLIED_TOTAL)
-                            .withModifier(Attributes.SAFE_FALL_DISTANCE, "featherweight", 2f, ADD_VALUE));
+                            .withModifier(Attributes.SAFE_FALL_DISTANCE, "featherweight", 2.5f, ADD_VALUE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> SURE_FOOTED =
             MOB_EFFECT.register("sure_footed", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x7EA35A)
@@ -70,7 +70,7 @@ public class MobEffects {
             MOB_EFFECT.register("long_reach", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x916E8A)
                             .withModifier(Attributes.BLOCK_INTERACTION_RANGE, "long_reach", 1, ADD_VALUE)
-                            .withModifier(Attributes.ENTITY_INTERACTION_RANGE, "long_reach", 1f, ADD_VALUE));
+                            .withModifier(Attributes.ENTITY_INTERACTION_RANGE, "long_reach", 1, ADD_VALUE));
 
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> HEAVY =
             MOB_EFFECT.register("heavy", () ->
@@ -117,8 +117,7 @@ public class MobEffects {
 
     public static final DeferredHolder<MobEffect, UnstableMobEffect> ENDERSTEP_UNSTABLE =
             MOB_EFFECT.register("enderstep_unstable", () ->
-                    new UnstableMobEffect(MobEffectCategory.NEUTRAL, 0x6C4E80));
-
+                    new UnstableMobEffect(MobEffectCategory.HARMFUL, 0x6C4E80));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> AFFLICTION = // has event in MobEffectEvents
             MOB_EFFECT.register("affliction", () ->
                     new SeasoningMobEffect(MobEffectCategory.HARMFUL, 0x663131));
