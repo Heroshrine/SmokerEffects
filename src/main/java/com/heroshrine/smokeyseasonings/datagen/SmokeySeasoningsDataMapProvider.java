@@ -1,9 +1,8 @@
 package com.heroshrine.smokeyseasonings.datagen;
 
 import com.heroshrine.smokeyseasonings.registry.DataMaps;
-import com.heroshrine.smokeyseasonings.registry.DataMaps.Seasoning;
-import com.heroshrine.smokeyseasonings.registry.DataMaps.SeasoningEffect;
 import com.heroshrine.smokeyseasonings.registry.MobEffects;
+import com.heroshrine.smokeyseasonings.world.food.Seasoning;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,6 +17,7 @@ import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import org.jspecify.annotations.NullMarked;
 
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
 import static com.heroshrine.smokeyseasonings.SmokeySeasonings.secondsToTicks;
@@ -127,7 +127,8 @@ public class SmokeySeasoningsDataMapProvider extends DataMapProvider {
     }
 
     private void quickAdd(Item item, SeasoningEffect... effects) {
-        this.builder(DataMaps.SEASONINGS).add(key(item), Seasoning.from(effects), false);
+        this.builder(DataMaps.SEASONINGS).add(key(item), new Seasoning(
+                Arrays.stream(effects).map(SeasoningEffect::toInstance).toList()), false);
     }
 
     private void quickAdd(Item item, Holder<MobEffect> effect, int duration) {
@@ -141,5 +142,15 @@ public class SmokeySeasoningsDataMapProvider extends DataMapProvider {
 
     private static ResourceKey<Item> key(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow();
+    }
+
+    private record SeasoningEffect(Holder<MobEffect> effect, int duration, int amplifier) {
+        SeasoningEffect(Holder<MobEffect> effect, int duration) {
+            this(effect, duration, 0);
+        }
+
+        MobEffectInstance toInstance() {
+            return new MobEffectInstance(effect, duration, amplifier);
+        }
     }
 }
