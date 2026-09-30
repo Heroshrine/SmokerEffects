@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.SmokerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -25,28 +26,40 @@ public class AbstractFurnaceBlockEntityMixin {
     @Inject(method = "serverTick", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;consumeFuel(Lnet/minecraft/core/NonNullList;Lnet/minecraft/world/item/ItemStack;)V"))
     private static void smokeyseasonings$captureSeasoning(ServerLevel level, BlockPos pos, BlockState state,
-                                                       AbstractFurnaceBlockEntity entity, CallbackInfo callback,
-                                                       @Local(name = "fuel") ItemStack fuel) {
+                                                          AbstractFurnaceBlockEntity entity, CallbackInfo callback,
+                                                          @Local(name = "fuel") ItemStack fuel) {
         if (!(entity instanceof SmokerBlockEntity be)) return;
-        be.setData(Attachments.ACTIVE_SEASONING, fuel.getItem() instanceof SeasoningPouch
-                ? fuel.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
-                : ItemContainerContents.EMPTY);
+        be.setData(Attachments.ACTIVE_SEASONING, smokeySeasonings$getFuelSeasoning(fuel));
         ActiveSeasoningPayload.sendToViewers(be);
     }
 
     @ModifyExpressionValue(method = "serverTick", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/item/crafting/AbstractCookingRecipe;assemble(Lnet/minecraft/world/item/crafting/SingleRecipeInput;)Lnet/minecraft/world/item/ItemStack;"))
     private static ItemStack smokeyseasonings$seasonResult(ItemStack result,
-                                                        @Local(argsOnly = true, name = "entity") AbstractFurnaceBlockEntity entity) {
+                                                           @Local(argsOnly = true, name = "entity") AbstractFurnaceBlockEntity entity,
+                                                           @Local(name = "fuel") ItemStack fuel,
+                                                           @Local(name = "isLit") boolean isLit) {
         if (!(entity instanceof SmokerBlockEntity be) || !result.has(DataComponents.CONSUMABLE))
             return result;
 
-        var seasoning = be.getData(Attachments.ACTIVE_SEASONING);
+        var seasoning = smokeySeasonings$getEffectiveSeasoning(be, isLit, fuel);
         if (seasoning.equals(ItemContainerContents.EMPTY))
             return result;
 
         var seasoned = result.copy();
         seasoned.set(Components.SEASONED_FOOD, SeasonedFood.from(seasoning, result.get(DataComponents.FOOD)));
         return seasoned;
+    }
+
+    @Unique
+    private static ItemContainerContents smokeySeasonings$getEffectiveSeasoning(SmokerBlockEntity be, boolean isLit, ItemStack fuel) {
+        return isLit ? be.getData(Attachments.ACTIVE_SEASONING) : smokeySeasonings$getFuelSeasoning(fuel);
+    }
+
+    @Unique
+    private static ItemContainerContents smokeySeasonings$getFuelSeasoning(ItemStack fuel) {
+        return fuel.getItem() instanceof SeasoningPouch
+                ? fuel.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
+                : ItemContainerContents.EMPTY;
     }
 }
