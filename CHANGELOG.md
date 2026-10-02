@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/Heroshrine/SmokeySeasonings/compare/v1.0.0...v1.1.0) (2026-10-02)
+
+
+### Features
+
+* **seasoning:** effects on seasoned food now sorted by effect category ordinality: BENEFICIAL -&gt; HARMFUL -&gt; NEUTRAL ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** swapped out, added, removed ingredients ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+
+
+### Bug Fixes
+
+* **seasoning:** rebalanced effect strengths and lengths ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** corrected amount of extra breath given from breath effect ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** made eye blossom less OP ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** seasoning pouch consumed by smoker when recipe output is impossible ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+
 ## [1.0.0](https://github.com/Heroshrine/SmokeySeasonings/releases/tag/v1.0.0) (2026-09-29)
 
 This is the first release of Smokey Seasonings, for Minecraft 26.1.2 on NeoForge. It adds seasoning pouches, which you burn in a smoker to cook food that gives weak but long-lasting effects when eaten.
