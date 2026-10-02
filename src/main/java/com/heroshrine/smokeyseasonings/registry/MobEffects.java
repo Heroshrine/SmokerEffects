@@ -51,7 +51,7 @@ public class MobEffects {
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> BREATH =
             MOB_EFFECT.register("breath", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x5499B0)
-                            .withModifier(Attributes.OXYGEN_BONUS, "breath", 1, ADD_VALUE));
+                            .withModifier(Attributes.OXYGEN_BONUS, "breath", 0.4f, ADD_VALUE));
     public static final DeferredHolder<MobEffect, SeasoningMobEffect> AQUANE =
             MOB_EFFECT.register("aquane", () ->
                     new SeasoningMobEffect(MobEffectCategory.BENEFICIAL, 0x275DA1)

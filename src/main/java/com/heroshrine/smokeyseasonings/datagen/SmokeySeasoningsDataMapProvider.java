@@ -6,11 +6,8 @@ import com.heroshrine.smokeyseasonings.world.food.Seasoning;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffect;
@@ -33,8 +30,8 @@ public class SmokeySeasoningsDataMapProvider extends DataMapProvider {
         super(packOutput, lookupProvider);
     }
 
-    private static final int VERY_BRIEF = secondsToTicks(30f);
-    private static final int BRIEF = minutesToTicks(1.75f);
+    private static final int VERY_BRIEF = secondsToTicks(30);
+    private static final int BRIEF = minutesToTicks(2);
     private static final int AVERAGE = minutesToTicks(3);
     private static final int LONG = minutesToTicks(5);
     private static final int VERY_LONG = minutesToTicks(7);

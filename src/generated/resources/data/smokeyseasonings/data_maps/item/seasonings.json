@@ -3,7 +3,7 @@
     "#minecraft:eggs": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:hearty",
           "show_icon": true
         }
@@ -26,7 +26,7 @@
     "minecraft:bamboo": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:long_reach",
           "show_icon": true
         }
@@ -35,7 +35,7 @@
     "minecraft:beetroot": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:might",
           "show_icon": true
         }
@@ -44,7 +44,7 @@
     "minecraft:beetroot_seeds": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:fervor",
           "show_icon": true
         }
@@ -63,7 +63,7 @@
     "minecraft:brown_mushroom": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:sated",
           "show_icon": true
         }
@@ -72,12 +72,12 @@
     "minecraft:cactus_flower": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:heat_tolerance",
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:sated",
           "show_icon": true
         }
@@ -104,12 +104,12 @@
     "minecraft:closed_eyeblossom": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:hearty",
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:might",
           "show_icon": true
         }
@@ -118,7 +118,7 @@
     "minecraft:cocoa_beans": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:fervor",
           "show_icon": true
         }
@@ -175,7 +175,7 @@
     "minecraft:ender_eye": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:enderstep",
           "show_icon": true
         }
@@ -184,7 +184,7 @@
     "minecraft:ender_pearl": {
       "effects": [
         {
-          "duration": 2103,
+          "duration": 2403,
           "id": "smokeyseasonings:enderstep_unstable",
           "show_icon": true
         }
@@ -207,12 +207,12 @@
     "minecraft:firefly_bush": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:featherweight",
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:breath",
           "show_icon": true
         }
@@ -221,7 +221,7 @@
     "minecraft:flint": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:brittle",
           "show_icon": true
         },
@@ -231,7 +231,7 @@
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:hearty",
           "show_icon": true
         },
@@ -278,12 +278,12 @@
     "minecraft:glow_ink_sac": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:aquane",
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:keen_eyes",
           "show_icon": true
         },
@@ -339,7 +339,7 @@
     "minecraft:honeycomb": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:iron_stomach",
           "show_icon": true
         }
@@ -348,7 +348,7 @@
     "minecraft:ink_sac": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:aquane",
           "show_icon": true
         }
@@ -357,7 +357,7 @@
     "minecraft:iron_nugget": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:heavy",
           "show_icon": true
         }
@@ -434,7 +434,7 @@
     "minecraft:pink_petals": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:featherweight",
           "show_icon": true
         }
@@ -452,12 +452,12 @@
     "minecraft:poisonous_potato": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:sated",
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:hearty",
           "show_icon": true
         },
@@ -590,7 +590,7 @@
     "minecraft:sugar_cane": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:brisk",
           "show_icon": true
         }
@@ -599,7 +599,7 @@
     "minecraft:sweet_berries": {
       "effects": [
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:vigor",
           "show_icon": true
         }
@@ -623,7 +623,7 @@
           "show_icon": true
         },
         {
-          "duration": 2100,
+          "duration": 2400,
           "id": "smokeyseasonings:aquane",
           "show_icon": true
         }
