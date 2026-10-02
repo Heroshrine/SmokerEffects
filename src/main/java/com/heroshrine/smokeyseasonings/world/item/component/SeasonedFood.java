@@ -37,10 +37,11 @@ public record SeasonedFood(List<MobEffectInstance> effects) implements Consumabl
     public static final float FULL_MEAL = 20.8f;
 
     public static SeasonedFood from(ItemContainerContents seasonings, @Nullable FoodProperties food) {
-        var effects = new HashMap<MobEffect, MobEffectInstance>();
+        var effects = new LinkedHashMap<MobEffect, MobEffectInstance>();
         var effectsStream = seasonings.nonEmptyItemCopyStream().map(s -> s.typeHolder().getData(DataMaps.SEASONINGS))
                 .filter(Objects::nonNull)
                 .flatMap(s -> s.effects().stream())
+                .sorted(Comparator.comparingInt(e -> e.getEffect().value().getCategory().ordinal()))
                 .toList();
 
         float scale = food == null ? 1f : Math.min(1f, (food.nutrition() + food.saturation()) / FULL_MEAL);
