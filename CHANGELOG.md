@@ -11,11 +11,9 @@
 
 ### Bug Fixes
 
-* **seasoning:** adjusted lengths of seasoning effects ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
-* **seasoning:** corrected amount of extra breath given from breath effect ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
-* **seasoning:** food effects added to food in same order that spices are added to pouch ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
-* **seasoning:** made eye blossom less OP ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
 * **seasoning:** rebalanced effect strengths and lengths ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** corrected amount of extra breath given from breath effect ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
+* **seasoning:** made eye blossom less OP ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
 * **seasoning:** seasoning pouch consumed by smoker when recipe output is impossible ([4d73df0](https://github.com/Heroshrine/SmokeySeasonings/commit/4d73df0f40cea3d5de56786602b639790b4a5000))
 
 ## [1.0.0](https://github.com/Heroshrine/SmokeySeasonings/releases/tag/v1.0.0) (2026-09-29)
