@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Heroshrine/SmokeySeasonings/compare/v1.1.0...v1.1.1) (2026-10-02)
+
+
+### Bug Fixes
+
+* **seasoning:** gold and copper ingot seasonings corrected to be gold and copper nuggets ([#15](https://github.com/Heroshrine/SmokeySeasonings/issues/15)) ([0c8960c](https://github.com/Heroshrine/SmokeySeasonings/commit/0c8960cd773f9e1edff142c443adb0a9abe041a1))
+
 ## [1.1.0](https://github.com/Heroshrine/SmokeySeasonings/compare/v1.0.0...v1.1.0) (2026-10-02)
 
 
