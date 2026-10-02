@@ -105,8 +105,8 @@ public class SmokeySeasoningsDataMapProvider extends DataMapProvider {
         quickAdd(Items.GOLDEN_DANDELION, MobEffects.SATED, AVERAGE);
 
         quickAdd(Items.IRON_NUGGET, MobEffects.HEAVY, BRIEF); // 'heavy'
-        quickAdd(Items.COPPER_INGOT, MobEffects.HEAVY, AVERAGE);
-        quickAdd(Items.GOLD_INGOT, MobEffects.HEAVY, AVERAGE, 1);
+        quickAdd(Items.COPPER_NUGGET, MobEffects.HEAVY, AVERAGE);
+        quickAdd(Items.GOLD_NUGGET, MobEffects.HEAVY, AVERAGE, 1);
 
         quickAdd(Items.RED_MUSHROOM, MobEffects.RECKLESS, VERY_BRIEF); // +2 atk, -4 def
         quickAdd(Items.CRIMSON_ROOTS, MobEffects.RECKLESS, AVERAGE); // +2 atk, -4 def
