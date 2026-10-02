@@ -123,8 +123,8 @@ public class SmokeySeasoningsDataMapProvider extends DataMapProvider {
         quickAdd(Items.FIREFLY_BUSH, new SeasoningEffect(MobEffects.FEATHERWEIGHT, BRIEF),
                 new SeasoningEffect(MobEffects.BREATH, BRIEF));
         quickAdd(Items.OPEN_EYEBLOSSOM, new SeasoningEffect(MobEffects.HEARTY, AVERAGE, 1),
-                new SeasoningEffect(MobEffects.MIGHT, AVERAGE, 1),
-                new SeasoningEffect(MobEffects.AFFLICTION, AVERAGE));
+                new SeasoningEffect(MobEffects.MIGHT, AVERAGE),
+                new SeasoningEffect(MobEffects.AFFLICTION, LONG));
         quickAdd(Items.CLOSED_EYEBLOSSOM, new SeasoningEffect(MobEffects.HEARTY, BRIEF),
                 new SeasoningEffect(MobEffects.MIGHT, BRIEF));
 

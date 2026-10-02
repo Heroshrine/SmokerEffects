@@ -401,13 +401,12 @@
           "show_icon": true
         },
         {
-          "amplifier": 1,
           "duration": 3600,
           "id": "smokeyseasonings:might",
           "show_icon": true
         },
         {
-          "duration": 3600,
+          "duration": 6000,
           "id": "smokeyseasonings:affliction",
           "show_icon": true
         }
