@@ -124,7 +124,7 @@
         }
       ]
     },
-    "minecraft:copper_ingot": {
+    "minecraft:copper_nugget": {
       "effects": [
         {
           "duration": 3600,
@@ -308,7 +308,7 @@
         }
       ]
     },
-    "minecraft:gold_ingot": {
+    "minecraft:gold_nugget": {
       "effects": [
         {
           "amplifier": 1,
